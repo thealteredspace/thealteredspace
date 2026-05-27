@@ -6,11 +6,10 @@
 
   <title>Guided By Mandy</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
 
   <style>
 
@@ -25,65 +24,69 @@
     }
 
     body {
-      background: #f5f1ea;
-      color: #1f1f1f;
+      background: #111111;
+      color: #f5f1ea;
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
-      line-height: 1.8;
+      line-height: 1.7;
     }
 
-    /* BACKGROUND ORB */
+    /* BACKGROUND */
 
-    .orb {
+    .gradient-bg {
       position: fixed;
-      width: 700px;
-      height: 700px;
-      background: radial-gradient(circle, rgba(143,96,76,0.15) 0%, rgba(245,241,234,0) 70%);
-      top: -200px;
-      right: -150px;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at top left, rgba(166, 97, 69, 0.25), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(122, 68, 48, 0.2), transparent 40%),
+        #111111;
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
       z-index: -1;
-      filter: blur(30px);
+      opacity: 0.06;
+      background-image:
+        url("https://grainy-gradients.vercel.app/noise.svg");
     }
 
     /* NAV */
 
     nav {
       position: fixed;
-      top: 0;
       width: 100%;
-      padding: 28px 50px;
+      top: 0;
+      padding: 28px 42px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      backdrop-filter: blur(12px);
-      background: rgba(245,241,234,0.75);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
       z-index: 1000;
     }
 
-    nav h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
-      font-size: 28px;
-      letter-spacing: 1px;
+    .logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 30px;
+      letter-spacing: -1px;
     }
 
     nav ul {
       display: flex;
-      gap: 32px;
+      gap: 28px;
       list-style: none;
     }
 
     nav a {
       text-decoration: none;
-      color: #444;
-      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
       letter-spacing: 1px;
       transition: 0.3s;
     }
 
     nav a:hover {
-      opacity: 0.6;
+      color: white;
     }
 
     /* HERO */
@@ -92,57 +95,62 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 0 24px;
-      text-align: center;
+      padding: 0 8%;
+      position: relative;
     }
 
     .hero-inner {
-      max-width: 950px;
+      max-width: 1000px;
     }
 
-    .small-title {
+    .eyebrow {
       text-transform: uppercase;
       letter-spacing: 0.35em;
       font-size: 12px;
-      color: #7b6e65;
-      margin-bottom: 30px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 32px;
     }
 
     h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 92px;
-      font-weight: 300;
-      line-height: 0.95;
+      font-family: 'Instrument Serif', serif;
+      font-size: 110px;
+      line-height: 0.92;
+      font-weight: 400;
+      letter-spacing: -4px;
       margin-bottom: 40px;
-      letter-spacing: -2px;
+      max-width: 950px;
     }
 
     .hero p {
-      max-width: 760px;
-      margin: auto;
-      font-size: 22px;
-      color: #4f4a46;
+      font-size: 24px;
+      max-width: 700px;
+      color: rgba(255,255,255,0.72);
       font-weight: 300;
     }
 
-    /* GENERAL SECTIONS */
+    /* FLOATING QUOTE */
+
+    .floating-quote {
+      position: absolute;
+      right: 8%;
+      bottom: 14%;
+      max-width: 280px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* SECTIONS */
 
     section {
-      padding: 140px 24px;
+      padding: 140px 8%;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 64px;
-      font-weight: 300;
+    .section-title {
+      font-family: 'Instrument Serif', serif;
+      font-size: 72px;
       margin-bottom: 40px;
-      letter-spacing: -1px;
+      letter-spacing: -2px;
     }
 
     .section-text {
@@ -151,66 +159,74 @@
 
     .section-text p {
       font-size: 20px;
-      color: #49433f;
       margin-bottom: 28px;
+      color: rgba(255,255,255,0.72);
       font-weight: 300;
     }
 
     /* ALTERED SPACE */
 
-    .altered-space {
-      background: #ece5dc;
-    }
-
     .journal-grid {
+      margin-top: 70px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
-      margin-top: 60px;
+      gap: 26px;
     }
 
     .journal-card {
-      background: rgba(255,255,255,0.7);
-      padding: 36px;
-      border-radius: 24px;
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(0,0,0,0.05);
+      padding: 42px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(12px);
       transition: 0.4s;
+      min-height: 260px;
+      position: relative;
     }
 
     .journal-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    .card-label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 26px;
     }
 
     .journal-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
+      font-family: 'Instrument Serif', serif;
+      font-size: 42px;
+      line-height: 1;
+      margin-bottom: 20px;
       font-weight: 400;
-      margin-bottom: 18px;
     }
 
     .journal-card p {
+      color: rgba(255,255,255,0.65);
       font-size: 17px;
-      color: #555;
       line-height: 1.7;
     }
 
-    /* REFLECTION */
+    /* REFLECTION STRIP */
 
-    .reflection {
-      background: #1f1f1f;
-      color: #f5f1ea;
+    .reflection-strip {
+      padding: 160px 8%;
       text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
-    .reflection p {
-      max-width: 760px;
+    .reflection-strip p {
+      font-family: 'Instrument Serif', serif;
+      font-size: 52px;
+      line-height: 1.3;
+      max-width: 950px;
       margin: auto;
-      font-size: 30px;
-      font-family: 'Cormorant Garamond', serif;
-      line-height: 1.5;
-      font-weight: 300;
-      color: #f5f1ea;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: -1px;
     }
 
     /* CONTACT */
@@ -221,52 +237,41 @@
 
     .button {
       display: inline-block;
-      margin-top: 40px;
+      margin-top: 42px;
       padding: 16px 38px;
       border-radius: 999px;
-      border: 1px solid #1f1f1f;
-      color: #1f1f1f;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
       text-decoration: none;
       transition: 0.3s;
     }
 
     .button:hover {
-      background: #1f1f1f;
-      color: #f5f1ea;
+      background: white;
+      color: black;
     }
 
     /* FOOTER */
 
     footer {
-      padding: 60px 24px;
-      text-align: center;
+      padding: 60px 8%;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.35);
       font-size: 13px;
-      color: #7a726b;
-      border-top: 1px solid rgba(0,0,0,0.08);
+      line-height: 1.7;
     }
 
     /* MOBILE */
 
-    @media (max-width: 768px) {
-
-      nav {
-        padding: 22px 24px;
-      }
-
-      nav ul {
-        gap: 16px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
+    @media (max-width: 900px) {
 
       h1 {
-        font-size: 58px;
+        font-size: 68px;
+        letter-spacing: -2px;
       }
 
-      h2 {
-        font-size: 46px;
+      .section-title {
+        font-size: 52px;
       }
 
       .hero p,
@@ -274,8 +279,20 @@
         font-size: 18px;
       }
 
-      .reflection p {
-        font-size: 24px;
+      .reflection-strip p {
+        font-size: 34px;
+      }
+
+      nav {
+        padding: 24px;
+      }
+
+      nav ul {
+        gap: 16px;
+      }
+
+      .floating-quote {
+        display: none;
       }
 
     }
@@ -285,18 +302,23 @@
 
 <body>
 
-  <div class="orb"></div>
+  <div class="gradient-bg"></div>
+  <div class="grain"></div>
 
   <!-- NAV -->
 
   <nav>
-    <h3>Guided By Mandy</h3>
+
+    <div class="logo">
+      Guided By Mandy
+    </div>
 
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#journal">The Altered Space</a></li>
+      <li><a href="#altered-space">The Altered Space</a></li>
       <li><a href="#connect">Connect</a></li>
     </ul>
+
   </nav>
 
   <!-- HERO -->
@@ -305,8 +327,8 @@
 
     <div class="hero-inner">
 
-      <div class="small-title">
-        A reflective journal and evolving space
+      <div class="eyebrow">
+        Reflective journal • consciousness • grief • medicine
       </div>
 
       <h1>
@@ -317,12 +339,17 @@
       </h1>
 
       <p>
-        Guided By Mandy explores psychedelic-assisted therapy,
-        oncology, consciousness, mortality, integration,
-        and the human search for meaning through a grounded,
-        reflective, and clinically informed lens.
+        Guided By Mandy is an evolving reflective space exploring
+        psychedelic-assisted therapy, oncology, mortality,
+        consciousness, integration, and the deeply human search
+        for meaning.
       </p>
 
+    </div>
+
+    <div class="floating-quote">
+      “We are beginning to medicalise experiences humans have wrestled with for centuries:
+      grief, transcendence, mortality, suffering, meaning.”
     </div>
 
   </section>
@@ -331,28 +358,26 @@
 
   <section id="about">
 
-    <div class="container">
+    <div class="section-title">
+      About
+    </div>
 
-      <h2>About</h2>
+    <div class="section-text">
 
-      <div class="section-text">
+      <p>
+        Guided By Mandy is a personal and professional project created by Mandy Prouting —
+        a radiation therapist with undergraduate training in psychology and a growing interest in psychedelic-assisted therapy, palliative care, grief, integration, and compassionate approaches to human wellbeing.
+      </p>
 
-        <p>
-          Guided By Mandy is a personal and professional project created by Mandy Prouting —
-          a radiation therapist with undergraduate training in psychology and a growing interest in psychedelic-assisted therapy, palliative care, grief, integration, and compassionate approaches to human wellbeing.
-        </p>
+      <p>
+        Rather than positioning certainty, this space is built around thoughtful reflection, nuanced discussion, ethical curiosity, and emotionally grounded exploration.
+      </p>
 
-        <p>
-          Rather than positioning certainty, this space is built around thoughtful reflection, nuanced discussion, ethical curiosity, and emotionally grounded exploration.
-        </p>
-
-        <p>
-          The intention is not to provide clinical treatment or definitive answers,
-          but to create space for conversation around medicine, mortality,
-          altered states, consciousness, embodiment, and meaning-making.
-        </p>
-
-      </div>
+      <p>
+        The intention is not to provide clinical treatment or definitive answers,
+        but to create space for conversation around altered states,
+        mortality, consciousness, medicine, embodiment, and meaning-making.
+      </p>
 
     </div>
 
@@ -360,48 +385,73 @@
 
   <!-- ALTERED SPACE -->
 
-  <section class="altered-space" id="journal">
+  <section id="altered-space">
 
-    <div class="container">
+    <div class="section-title">
+      The Altered Space
+    </div>
 
-      <h2>The Altered Space</h2>
+    <div class="section-text">
 
-      <div class="section-text">
+      <p>
+        A developing journal exploring altered states,
+        psychedelic research, ethics, mortality,
+        integration, consciousness, and the evolving
+        relationship between medicine and meaning.
+      </p>
+
+    </div>
+
+    <div class="journal-grid">
+
+      <div class="journal-card">
+
+        <div class="card-label">
+          Research
+        </div>
+
+        <h3>
+          Psychedelic
+          Research
+        </h3>
 
         <p>
-          A developing journal exploring altered states,
-          psychedelic research, grief, ethics, consciousness,
-          integration, and the evolving intersection between
-          medicine and meaning.
+          Interpreting emerging psychedelic-assisted therapy research through a grounded and clinically reflective lens.
         </p>
 
       </div>
 
-      <div class="journal-grid">
+      <div class="journal-card">
 
-        <div class="journal-card">
-          <h3>Research Reflections</h3>
-
-          <p>
-            Interpreting psychedelic-assisted therapy research through a grounded and clinically reflective lens.
-          </p>
+        <div class="card-label">
+          Ethics
         </div>
 
-        <div class="journal-card">
-          <h3>Ethics & Aotearoa</h3>
+        <h3>
+          Ethics &
+          Aotearoa
+        </h3>
 
-          <p>
-            Exploring evolving legal, ethical, and cultural conversations surrounding altered states and emerging therapies in New Zealand and Australia.
-          </p>
+        <p>
+          Exploring evolving legal, ethical, and cultural conversations surrounding altered states and emerging therapies.
+        </p>
+
+      </div>
+
+      <div class="journal-card">
+
+        <div class="card-label">
+          Reflection
         </div>
 
-        <div class="journal-card">
-          <h3>Meaning & Mortality</h3>
+        <h3>
+          Meaning &
+          Mortality
+        </h3>
 
-          <p>
-            Reflections on grief, mortality, embodiment, suffering, and the deeply human search for meaning.
-          </p>
-        </div>
+        <p>
+          Reflections on grief, embodiment, suffering, mortality, and the human search for meaning.
+        </p>
 
       </div>
 
@@ -411,42 +461,36 @@
 
   <!-- REFLECTION -->
 
-  <section class="reflection">
+  <div class="reflection-strip">
 
-    <div class="container">
+    <p>
+      “Healing is not always something we create.
+      Sometimes it is something we allow.”
+    </p>
 
-      <p>
-        “Healing is not always something we create.
-        Sometimes it is something we allow.”
-      </p>
-
-    </div>
-
-  </section>
+  </div>
 
   <!-- CONTACT -->
 
   <section class="contact" id="connect">
 
-    <div class="container">
+    <div class="section-title">
+      Connect
+    </div>
 
-      <h2>Connect</h2>
+    <div class="section-text" style="margin:auto;">
 
-      <div class="section-text" style="margin:auto;">
-
-        <p>
-          If you would like to connect, collaborate,
-          or follow the ongoing development of this space,
-          feel free to reach out.
-        </p>
-
-      </div>
-
-      <a class="button" href="mailto:mandylornabrooke@gmail.com">
-        Contact Mandy
-      </a>
+      <p>
+        If you would like to connect, collaborate,
+        or follow the ongoing development of this space,
+        feel free to reach out.
+      </p>
 
     </div>
+
+    <a class="button" href="mailto:mandylornabrooke@gmail.com">
+      Contact Mandy
+    </a>
 
   </section>
 

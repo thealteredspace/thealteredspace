@@ -6,6 +6,7 @@
 
   <title>Guided By Mandy</title>
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -37,9 +38,16 @@
       position: fixed;
       inset: 0;
       z-index: -2;
+
       background:
-        radial-gradient(circle at top left, rgba(166, 97, 69, 0.25), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(122, 68, 48, 0.2), transparent 40%),
+        radial-gradient(circle at top left,
+        rgba(166, 97, 69, 0.18),
+        transparent 35%),
+
+        radial-gradient(circle at bottom right,
+        rgba(122, 68, 48, 0.16),
+        transparent 40%),
+
         #111111;
     }
 
@@ -47,7 +55,8 @@
       position: fixed;
       inset: 0;
       z-index: -1;
-      opacity: 0.06;
+      opacity: 0.05;
+
       background-image:
         url("https://grainy-gradients.vercel.app/noise.svg");
     }
@@ -56,9 +65,9 @@
 
     nav {
       position: fixed;
-      width: 100%;
       top: 0;
-      padding: 28px 42px;
+      width: 100%;
+      padding: 26px 42px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -79,7 +88,7 @@
 
     nav a {
       text-decoration: none;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,255,255,0.65);
       font-size: 13px;
       letter-spacing: 1px;
       transition: 0.3s;
@@ -107,7 +116,7 @@
       text-transform: uppercase;
       letter-spacing: 0.35em;
       font-size: 12px;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.4);
       margin-bottom: 32px;
     }
 
@@ -118,26 +127,24 @@
       font-weight: 400;
       letter-spacing: -4px;
       margin-bottom: 40px;
-      max-width: 950px;
+      max-width: 900px;
     }
 
     .hero p {
       font-size: 24px;
-      max-width: 700px;
+      max-width: 720px;
       color: rgba(255,255,255,0.72);
       font-weight: 300;
     }
 
-    /* FLOATING QUOTE */
-
-    .floating-quote {
+    .floating-note {
       position: absolute;
       right: 8%;
-      bottom: 14%;
-      max-width: 280px;
+      bottom: 12%;
+      max-width: 300px;
       font-size: 15px;
       line-height: 1.7;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.4);
     }
 
     /* SECTIONS */
@@ -167,10 +174,10 @@
     /* ALTERED SPACE */
 
     .journal-grid {
-      margin-top: 70px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 26px;
+      margin-top: 70px;
     }
 
     .journal-card {
@@ -179,8 +186,7 @@
       background: rgba(255,255,255,0.03);
       backdrop-filter: blur(12px);
       transition: 0.4s;
-      min-height: 260px;
-      position: relative;
+      min-height: 280px;
     }
 
     .journal-card:hover {
@@ -210,13 +216,21 @@
       line-height: 1.7;
     }
 
-    /* REFLECTION STRIP */
+    /* LATEST REFLECTION */
 
     .reflection-strip {
       padding: 160px 8%;
-      text-align: center;
       border-top: 1px solid rgba(255,255,255,0.06);
       border-bottom: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+    }
+
+    .reflection-label {
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 30px;
     }
 
     .reflection-strip p {
@@ -233,49 +247,14 @@
 
     .contact {
       text-align: center;
-    }<!-- CONTACT -->
-
-<section class="contact" id="connect">
-
-  <div class="section-title">
-    Connect
-  </div>
-
-  <div class="section-text" style="margin:auto; max-width:700px;">
-
-    <p>
-      This space is still evolving.
-    </p>
-
-    <p>
-      If something here resonates with you — whether professionally,
-      personally, or philosophically — you’re welcome to reach out.
-    </p>
-
-    <p>
-      I’m interested in thoughtful conversations around psychedelic-assisted therapy,
-      grief, oncology, consciousness, integration, ethics, and the human search for meaning.
-    </p>
-
-    <p style="opacity:0.7; font-size:16px; margin-top:40px;">
-      Guided By Mandy is an educational and reflective project only.
-      It does not provide medical, psychological, or psychedelic treatment services.
-    </p>
-
-  </div>
-
-  <a class="button" href="mailto:mandylornabrooke@gmail.com">
-    Contact Mandy
-  </a>
-
-</section>
+    }
 
     .button {
       display: inline-block;
       margin-top: 42px;
       padding: 16px 38px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.18);
       color: white;
       text-decoration: none;
       transition: 0.3s;
@@ -326,7 +305,7 @@
         gap: 16px;
       }
 
-      .floating-quote {
+      .floating-note {
         display: none;
       }
 
@@ -363,7 +342,7 @@
     <div class="hero-inner">
 
       <div class="eyebrow">
-        Reflective journal • consciousness • grief • medicine
+        reflective journal • consciousness • grief • medicine
       </div>
 
       <h1>
@@ -376,15 +355,14 @@
       <p>
         Guided By Mandy is an evolving reflective space exploring
         psychedelic-assisted therapy, oncology, mortality,
-        consciousness, integration, and the deeply human search
-        for meaning.
+        integration, consciousness, and the human search for meaning.
       </p>
 
     </div>
 
-    <div class="floating-quote">
+    <div class="floating-note">
       “We are beginning to medicalise experiences humans have wrestled with for centuries:
-      grief, transcendence, mortality, suffering, meaning.”
+      grief, transcendence, mortality, suffering, and meaning.”
     </div>
 
   </section>
@@ -411,7 +389,7 @@
       <p>
         The intention is not to provide clinical treatment or definitive answers,
         but to create space for conversation around altered states,
-        mortality, consciousness, medicine, embodiment, and meaning-making.
+        mortality, medicine, embodiment, consciousness, and meaning-making.
       </p>
 
     </div>
@@ -496,14 +474,18 @@
 
   <!-- REFLECTION -->
 
-  <div class="reflection-strip">
+  <section class="reflection-strip">
+
+    <div class="reflection-label">
+      Latest Reflection
+    </div>
 
     <p>
       “Healing is not always something we create.
       Sometimes it is something we allow.”
     </p>
 
-  </div>
+  </section>
 
   <!-- CONTACT -->
 
@@ -513,12 +495,25 @@
       Connect
     </div>
 
-    <div class="section-text" style="margin:auto;">
+    <div class="section-text" style="margin:auto; max-width:700px;">
 
       <p>
-        If you would like to connect, collaborate,
-        or follow the ongoing development of this space,
-        feel free to reach out.
+        This space is still evolving.
+      </p>
+
+      <p>
+        If something here resonates with you — whether professionally,
+        personally, or philosophically — you’re welcome to reach out.
+      </p>
+
+      <p>
+        I’m interested in thoughtful conversations around psychedelic-assisted therapy,
+        grief, oncology, consciousness, integration, ethics, and the human search for meaning.
+      </p>
+
+      <p style="opacity:0.6; font-size:16px; margin-top:40px;">
+        Guided By Mandy is an educational and reflective project only.
+        It does not provide medical, psychological, or psychedelic treatment services.
       </p>
 
     </div>

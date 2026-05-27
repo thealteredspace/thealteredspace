@@ -1,16 +1,40 @@
-## Hi there 👋
+# Guided By Mandy — Phase 1 Website
 
-<!--
-**thealteredspace/thealteredspace** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+A simple static website for the first phase of Guided By Mandy.
 
-Here are some ideas to get you started:
+## Site Structure
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- Home
+- About
+- The Altered Space
+- Connect
+
+## Files
+
+- `index.html` — page content and structure
+- `styles.css` — design, layout, colours, typography
+- `script.js` — mobile navigation and current year
+
+## How to Use on GitHub + Vercel
+
+1. Create a new GitHub repository.
+2. Upload these files into the repository.
+3. In Vercel, select **Add New Project**.
+4. Import the GitHub repository.
+5. Deploy.
+
+Every future change committed to GitHub will automatically update the Vercel site.
+
+## Suggested Repository Names
+
+- `guided-by-mandy`
+- `guided-by-mandy-phase-one`
+- `the-altered-space`
+
+## Boundary Statement Included
+
+The footer includes a scope-of-practice statement:
+
+> Educational and reflective content only. This site does not provide medical advice, diagnosis, psychotherapy, prescribing, crisis support, or psychedelic facilitation.
+
+This wording can be adjusted later if the business model or professional scope changes.

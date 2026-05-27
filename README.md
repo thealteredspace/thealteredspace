@@ -1,40 +1,75 @@
-# Guided By Mandy — Phase 1 Website
+# Guided By Mandy
 
-A simple static website for the first phase of Guided By Mandy.
+A reflective professional space exploring psychology, oncology, meaning-making, grief, consciousness, and altered states.
 
-## Site Structure
+## About
 
-- Home
-- About
-- The Altered Space
-- Connect
+Guided By Mandy is a personal and professional project created by Mandy Prouting — a radiation therapist with undergraduate training in psychology and a growing interest in psychedelic-assisted therapy, palliative care, integration, and compassionate approaches to healing and meaning-making.
 
-## Files
+This project is intentionally grounded, reflective, and ethically considered. It is not a clinical psychedelic service, nor does it provide medical or psychological treatment. Instead, it exists as a space for thoughtful conversation, writing, research reflection, and future interdisciplinary collaboration.
 
-- `index.html` — page content and structure
-- `styles.css` — design, layout, colours, typography
-- `script.js` — mobile navigation and current year
+## The Altered Space
 
-## How to Use on GitHub + Vercel
+The Altered Space is an evolving section within the project focused on:
 
-1. Create a new GitHub repository.
-2. Upload these files into the repository.
-3. In Vercel, select **Add New Project**.
-4. Import the GitHub repository.
-5. Deploy.
+- Psychedelic-assisted therapy research
+- Ethical and legal developments in Aotearoa New Zealand and Australia
+- Grief, mortality, and meaning
+- Consciousness and embodiment
+- Integration and reflective practice
+- Interdisciplinary dialogue and community connection
 
-Every future change committed to GitHub will automatically update the Vercel site.
+The intention is not to position certainty or expertise, but to foster grounded curiosity, nuanced thinking, and compassionate exploration.
 
-## Suggested Repository Names
+## Philosophy
 
-- `guided-by-mandy`
-- `guided-by-mandy-phase-one`
-- `the-altered-space`
+The tone and direction of this project are guided by:
 
-## Boundary Statement Included
+- Presence over performance
+- Reflection over sensationalism
+- Evidence-informed curiosity
+- Compassionate and relational care
+- Respect for ethical and professional boundaries
+- Openness to complexity and uncertainty
 
-The footer includes a scope-of-practice statement:
+## Current Stage
 
-> Educational and reflective content only. This site does not provide medical advice, diagnosis, psychotherapy, prescribing, crisis support, or psychedelic facilitation.
+This website represents Phase One of a longer-term vision.
 
-This wording can be adjusted later if the business model or professional scope changes.
+Current goals include:
+
+- Creating a reflective online presence
+- Connecting with like-minded clinicians, thinkers, and collaborators
+- Sharing thoughtful writing and perspectives
+- Building a future platform for education, discussion, and community
+
+Future possibilities may include:
+- Articles and essays
+- Research interpretation
+- Newsletter development
+- Workshops and speaking
+- Collaborative projects
+- Integration-informed educational resources
+
+## Tech Stack
+
+Built with:
+- React / Next.js
+- Tailwind CSS
+- Vercel deployment
+
+## Disclaimer
+
+The content on this website is for educational and reflective purposes only and should not be considered medical, psychological, or legal advice.
+
+Guided By Mandy does not provide psychedelic therapy, prescribe substances, or offer regulated mental health treatment services.
+
+## Contact
+
+For connection or collaboration enquiries:
+
+Email: your@email.com
+
+---
+
+Presence. Meaning. Altered Perspectives.

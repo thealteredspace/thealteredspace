@@ -1,131 +1,193 @@
-export default function Home() {
-  return (
-    <main className="bg-[#f7f4ef] text-[#1f1f1f] min-h-screen">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      {/* HERO */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="max-w-4xl text-center">
+  <title>Guided By Mandy</title>
 
-          <p className="uppercase tracking-[0.35em] text-sm text-neutral-500 mb-6">
-            Guided By Mandy
-          </p>
+  <link rel="stylesheet" href="styles.css" />
 
-          <h1 className="text-5xl md:text-7xl font-extralight leading-tight mb-8">
-            Presence.
-            <br />
-            Meaning.
-            <br />
-            Altered Perspectives.
-          </h1>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f4ef;
+      color: #1f1f1f;
+      line-height: 1.7;
+    }
 
-          <p className="text-lg md:text-xl text-neutral-700 leading-relaxed max-w-2xl mx-auto">
-            Grounded conversations at the intersection of psychology,
-            oncology, meaning-making, grief, consciousness, and altered
-            states.
-          </p>
+    section {
+      padding: 120px 24px;
+      border-top: 1px solid #ddd;
+    }
 
-        </div>
-      </section>
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
-      {/* ABOUT */}
-      <section
-        id="about"
-        className="border-t border-neutral-200 py-28 px-6"
-      >
-        <div className="max-w-3xl mx-auto">
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
 
-          <h2 className="text-3xl font-light mb-10">
-            About
-          </h2>
+    h1 {
+      font-size: 72px;
+      font-weight: 200;
+      line-height: 1.1;
+      margin-bottom: 32px;
+    }
 
-          <div className="space-y-8 text-lg leading-relaxed text-neutral-700">
+    h2 {
+      font-size: 36px;
+      font-weight: 300;
+      margin-bottom: 32px;
+    }
 
-            <p>
-              Guided By Mandy is a reflective professional space created by
-              Mandy Prouting — a radiation therapist with undergraduate
-              training in psychology and a growing interest in
-              psychedelic-assisted therapy, palliative care, integration,
-              grief, and compassionate approaches to meaning-making.
-            </p>
+    p {
+      font-size: 20px;
+      color: #444;
+      margin-bottom: 24px;
+    }
 
-            <p>
-              This is not a clinical psychedelic service. It is a space for
-              thoughtful reflection, emerging ideas, interdisciplinary
-              dialogue, and grounded conversation around the human
-              experience.
-            </p>
+    .small-title {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #777;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
 
-            <p>
-              My interests sit at the intersection of medicine,
-              psychology, embodiment, consciousness, mortality, and the
-              ways people search for meaning through suffering, healing,
-              connection, and transformation.
-            </p>
+    .alt-section {
+      background: #efeae2;
+    }
 
-          </div>
-        </div>
-      </section>
+    .button {
+      display: inline-block;
+      border: 1px solid #333;
+      padding: 14px 32px;
+      text-decoration: none;
+      color: #111;
+      border-radius: 999px;
+      transition: 0.3s;
+    }
 
-      {/* ALTERED SPACE */}
-      <section
-        id="altered-space"
-        className="border-t border-neutral-200 bg-[#efeae2] py-28 px-6"
-      >
-        <div className="max-w-3xl mx-auto">
+    .button:hover {
+      background: black;
+      color: white;
+    }
 
-          <h2 className="text-3xl font-light mb-8">
-            The Altered Space
-          </h2>
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 48px;
+      }
 
-          <div className="space-y-6 text-lg leading-relaxed text-neutral-700">
+      p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
 
-            <p className="italic text-neutral-500">
-              Coming soon.
-            </p>
+<body>
 
-            <p>
-              A future home for reflective writing, research
-              interpretation, ethical discussion, and thoughtful
-              conversation around altered states, consciousness, grief,
-              integration, and healing.
-            </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
 
-            <p>
-              The intention is not to provide answers, but to create
-              space for grounded curiosity, nuanced thinking, and
-              compassionate exploration.
-            </p>
+      <div class="small-title">
+        Guided By Mandy
+      </div>
 
-          </div>
-        </div>
-      </section>
+      <h1>
+        Presence.<br />
+        Meaning.<br />
+        Altered Perspectives.
+      </h1>
 
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="border-t border-neutral-200 py-28 px-6"
-      >
-        <div className="max-w-2xl mx-auto text-center">
+      <p>
+        Grounded conversations at the intersection of psychology,
+        oncology, meaning-making, grief, consciousness, and altered states.
+      </p>
 
-          <h2 className="text-3xl font-light mb-8">
-            Connect
-          </h2>
+    </div>
+  </section>
 
-          <p className="text-lg text-neutral-700 leading-relaxed mb-10">
-            If you would like to connect, collaborate, or follow the
-            ongoing development of this space, feel free to reach out.
-          </p>
+  <!-- ABOUT -->
+  <section>
+    <div class="container">
 
-          <a
-            href="mailto:your@email.com"
-            className="inline-block border border-neutral-400 px-8 py-4 rounded-full hover:bg-black hover:text-white transition-all duration-300"
-          >
-            Contact Mandy
-          </a>
+      <h2>About</h2>
 
-        </div>
-      </section>
+      <p>
+        Guided By Mandy is a reflective professional space created by
+        Mandy Prouting — a radiation therapist with undergraduate
+        training in psychology and a growing interest in
+        psychedelic-assisted therapy, palliative care, integration,
+        grief, and compassionate approaches to meaning-making.
+      </p>
 
-    </main>
-  );
-}
+      <p>
+        This is not a clinical psychedelic service. It is a space for
+        thoughtful reflection, emerging ideas, interdisciplinary dialogue,
+        and grounded conversation around the human experience.
+      </p>
+
+      <p>
+        My interests sit at the intersection of medicine,
+        psychology, embodiment, consciousness, mortality,
+        and the ways people search for meaning through suffering,
+        healing, connection, and transformation.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ALTERED SPACE -->
+  <section class="alt-section">
+    <div class="container">
+
+      <h2>The Altered Space</h2>
+
+      <p><em>Coming soon.</em></p>
+
+      <p>
+        A future home for reflective writing, research interpretation,
+        ethical discussion, and thoughtful conversation around altered states,
+        consciousness, grief, integration, and healing.
+      </p>
+
+      <p>
+        The intention is not to provide answers,
+        but to create space for grounded curiosity,
+        nuanced thinking, and compassionate exploration.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="container" style="text-align:center;">
+
+      <h2>Connect</h2>
+
+      <p>
+        If you would like to connect, collaborate,
+        or follow the ongoing development of this space,
+        feel free to reach out.
+      </p>
+
+      <a class="button" href="mailto:your@email.com">
+        Contact Mandy
+      </a>
+
+    </div>
+  </section>
+
+</body>
+</html>

@@ -6,8 +6,6 @@
 
   <title>Guided By Mandy</title>
 
-  <link rel="stylesheet" href="styles.css" />
-
   <style>
     body {
       margin: 0;
@@ -15,6 +13,32 @@
       background: #f7f4ef;
       color: #1f1f1f;
       line-height: 1.7;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(247, 244, 239, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 20px 40px;
+      border-bottom: 1px solid #ddd;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 14px;
+      letter-spacing: 1px;
     }
 
     section {
@@ -31,8 +55,16 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
+    }
+
+    .small-title {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 32px;
     }
 
     h1 {
@@ -43,7 +75,7 @@
     }
 
     h2 {
-      font-size: 36px;
+      font-size: 38px;
       font-weight: 300;
       margin-bottom: 32px;
     }
@@ -54,31 +86,51 @@
       margin-bottom: 24px;
     }
 
-    .small-title {
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      color: #777;
-      margin-bottom: 32px;
-      font-size: 14px;
-    }
-
     .alt-section {
       background: #efeae2;
     }
 
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #ddd;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-weight: 400;
+    }
+
     .button {
       display: inline-block;
-      border: 1px solid #333;
+      border: 1px solid #222;
       padding: 14px 32px;
+      border-radius: 999px;
       text-decoration: none;
       color: #111;
-      border-radius: 999px;
       transition: 0.3s;
+      margin-top: 16px;
     }
 
     .button:hover {
       background: black;
       color: white;
+    }
+
+    footer {
+      padding: 60px 24px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      border-top: 1px solid #ddd;
     }
 
     @media (max-width: 768px) {
@@ -89,11 +141,24 @@
       p {
         font-size: 18px;
       }
+
+      nav ul {
+        gap: 18px;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#altered-space">The Altered Space</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
 
   <!-- HERO -->
   <section class="hero">
@@ -118,7 +183,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section>
+  <section id="about">
     <div class="container">
 
       <h2>About</h2>
@@ -141,37 +206,57 @@
         My interests sit at the intersection of medicine,
         psychology, embodiment, consciousness, mortality,
         and the ways people search for meaning through suffering,
-        healing, connection, and transformation.
+        healing, connection, and change.
       </p>
 
     </div>
   </section>
 
   <!-- ALTERED SPACE -->
-  <section class="alt-section">
+  <section id="altered-space" class="alt-section">
     <div class="container">
 
       <h2>The Altered Space</h2>
 
-      <p><em>Coming soon.</em></p>
-
       <p>
-        A future home for reflective writing, research interpretation,
-        ethical discussion, and thoughtful conversation around altered states,
-        consciousness, grief, integration, and healing.
+        A developing space for reflective writing, research interpretation,
+        ethical discussion, and grounded conversation around altered states
+        and human experience.
       </p>
 
-      <p>
-        The intention is not to provide answers,
-        but to create space for grounded curiosity,
-        nuanced thinking, and compassionate exploration.
-      </p>
+      <div class="cards">
+
+        <div class="card">
+          <h3>Research Reflections</h3>
+          <p>
+            Interpreting emerging psychedelic-assisted therapy research
+            through a grounded and clinically reflective lens.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Ethics & Legal Context</h3>
+          <p>
+            Exploring evolving conversations around psychedelic regulation,
+            safety, access, and responsible practice in New Zealand and Australia.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Meaning & Integration</h3>
+          <p>
+            Reflections on grief, embodiment, mortality,
+            consciousness, and the human search for meaning.
+          </p>
+        </div>
+
+      </div>
 
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section>
+  <!-- CONNECT -->
+  <section id="connect">
     <div class="container" style="text-align:center;">
 
       <h2>Connect</h2>
@@ -182,12 +267,19 @@
         feel free to reach out.
       </p>
 
-      <a class="button" href="mailto:your@email.com">
+      <a class="button" href="mailto:mandylornabrooke@gmail.com">
         Contact Mandy
       </a>
 
     </div>
   </section>
+
+  <!-- FOOTER -->
+  <footer>
+    This website is for educational and reflective purposes only.
+    It does not provide medical, psychological, legal,
+    or psychedelic treatment advice.
+  </footer>
 
 </body>
 </html>
